@@ -1,0 +1,10 @@
+#!/bin/sh
+
+exit
+
+w=$(tac ~/.tilekitty/hypr/workspaces.conf | grep 'workspace = ' | sed -n -e 's/^workspace = //p' | cut -d , -f 1)
+
+for line in $w
+do
+    hyprctl dispatch workspace "$line"
+done
