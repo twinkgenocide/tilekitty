@@ -15,7 +15,7 @@ ASK="$2"
 
 ask_first() {
     play_sound message.ogg
-    RESULT=$(notify-send -i power -u critical -A yes="Yes" -A no="No" "Proceed with ${ACTION^}?")
+    RESULT=$(notify-send -i power-symbolic -u critical -A yes="Yes" -A no="No" "Proceed with ${ACTION^}?")
     if [ "$RESULT" == "no"  ]; then
         play_sound bell.ogg
         exit 1
