@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.tilekitty/env
+source ~/.tilekitty/env.sh
 
 PARAMS="-c $TK_RES/snippets/hyprlock-fade.conf"
 
@@ -14,17 +14,17 @@ fade_in() {
 }
 
 case $1 in
-    "in")
-        PARAMS="$PARAMS --no-fade-in"
-        fade_in $2 &
-        ;;
-    "out")
-        :
-        ;;
-    *)
-        echo "usage: fade (in|out) [sound]"
-        exit 1
-        ;;
+"in")
+    PARAMS="$PARAMS --no-fade-in"
+    fade_in $2 &
+    ;;
+"out")
+    :
+    ;;
+*)
+    echo "usage: fade (in|out) [sound]"
+    exit 1
+    ;;
 esac
 
 hyprlock $PARAMS

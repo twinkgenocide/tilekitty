@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.tilekitty/env
+source ~/.tilekitty/env.sh
 
 pgrep slurp
 if [ $? -eq 0 ]; then
@@ -9,7 +9,7 @@ fi
 
 if [[ $1 == s ]]; then
     play_sound screen-capture.ogg &
-    grim - | wl-copy 
+    grim - | wl-copy
 fi
 
 if [[ $1 == r ]]; then
@@ -21,4 +21,3 @@ if [[ $1 == r ]]; then
         grim -g "$REGION" - | wl-copy
     fi
 fi
-

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ~/.tilekitty/env
+source ~/.tilekitty/env.sh
 
 if pidof -o %PPID -x "power" ; then
     exit 1
