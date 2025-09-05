@@ -31,6 +31,8 @@ FETCH_INTERVAL = 900  # in seconds. default: 900 (15 min)
 visible_entries = []
 active_entries = []
 queued_entries = []
+
+feeds_parsed = False
 splash_title = None
 
 # main
@@ -52,7 +54,7 @@ def main():
         elif len(active_entries) > 0:
             visible_entries = active_entries[:SCROLL_RENDER]
             update_line()
-        else:
+        elif feeds_parsed:
             splash()
         time.sleep(SCROLL_INTERVAL)
 
@@ -115,9 +117,12 @@ def periodic_fetch():
             time.sleep(15)
 
 def parse_feeds():
+    global feeds_parsed
+
     log(":: PARSING FEEDS ::")
     urls = get_feed_urls()
     entries = []
+
     for url in urls:
         parsing_splash(url)
         log("On URL " + url)
@@ -139,6 +144,8 @@ def parse_feeds():
                 })
             log("Appended " + str(len(feed.entries)) + " entries")
             break
+
+    feeds_parsed = True
     return entries
 
 def parse_url(url):
