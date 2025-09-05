@@ -1,3 +1,5 @@
+#/usr/bin/env bash
+
 TK="$HOME/.tilekitty"
 TK_RES="$TK/resources"
 TK_BIN="$TK/scripts"
