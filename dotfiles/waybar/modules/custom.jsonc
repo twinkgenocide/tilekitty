@@ -4,11 +4,11 @@
         "tooltip":  false
     },
     "custom/ticker": {
-        "exec": "~/Code/desktop-scripts/bar/rss-ticker.py",
+        "exec": "~/.tilekitty/scripts/session/bar/rss-ticker.py",
         "format": "{}"
     },
     "custom/notifs": {
-        "exec": "~/Code/desktop-scripts/bar/notifs.sh",
+        "exec": "~/.tilekitty/scripts/session/bar/toggle-notifs.sh",
         "interval": "once",
         "on-click": "swaync-client -d",
         "exec-on-event": true,
@@ -16,7 +16,7 @@
         "return-type": "json"
     },
     "custom/network": {
-        "exec": "~/Code/desktop-scripts/bar/ping-status.sh",
+        "exec": "~/.tilekitty/scripts/session/bar/ping-status.sh",
         "on-click": "~/Code/desktop-scripts/bar/toggle-airplane.sh",
         "exec-on-event": true,
         "format": "<span size='x-large'>{}</span>",
