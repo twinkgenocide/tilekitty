@@ -5,7 +5,7 @@ source ~/.tilekitty/env.sh
 PARAMS="-c $TK_RES/snippets/hyprlock-fade.conf"
 
 fade_in() {
-    sleep 1.5
+    sleep 2.5
     pkill -USR1 hyprlock
     if [ "$1" == "sound" ]; then
         /usr/local/bin/tilekitty/playsound desktop-login.ogg

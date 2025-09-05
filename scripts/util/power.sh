@@ -28,10 +28,10 @@ fade_out() {
     fi
     play_sound desktop-logoff.ogg
     sleep 1
-    $TK_BIN/util/fade out &
-    sleep 0.7
+    $TK_BIN/util/fade.sh out &
+    sleep 1.0
     hyprctl dispatch dpms off
-    sleep 3.3
+    sleep 3.0
 }
 
 case "$ACTION" in
