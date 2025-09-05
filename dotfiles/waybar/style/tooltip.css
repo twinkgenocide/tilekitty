@@ -1,0 +1,15 @@
+tooltip {
+   background-color: transparent;
+}
+
+tooltip > box {
+   margin-top: 0;
+   padding: 6px 9px;
+   background-color: @bg-light;
+   border: 1px solid @bg-border;
+   border-radius: 12px;
+}
+
+tooltip label {
+    color: @fg;
+}

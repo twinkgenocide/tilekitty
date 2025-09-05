@@ -1,0 +1,46 @@
+{
+    "pulseaudio": {
+        "format": "<span size='x-large'>{icon}</span>",
+        "format-muted": "<span size='x-large'>󰸈</span>",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "on-click": "pamixer -t",
+        "tooltip": false
+    },
+    "clock#date": {
+        "interval": 1,
+        "format": "{:%b %d, %Y}",
+        "tooltip": false
+    },
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%I:%M %p}",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 3,
+        "format": "RAM {percentage}%",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "CPU {usage}%",
+        "tooltip": false
+    },
+    "group/status": {
+        "orientation": "horizontal",
+        "drawer": { },
+        "modules": [
+            "clock#time",
+            "custom/sep",
+            "clock#date",
+            "custom/sep",
+            "memory",
+            "custom/sep",
+            "cpu"
+        ]
+    }
+}

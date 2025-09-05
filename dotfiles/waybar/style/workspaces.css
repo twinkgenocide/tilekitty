@@ -1,0 +1,39 @@
+#workspaces {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: inherit;
+
+    padding: 0 12px;
+    margin: 0;
+
+    transition: background-color, color, border-color, text-shadow;
+    transition-duration: .15s;
+    transition-timing-function: inherit;
+}
+
+#workspaces button.empty:not(.active):not(:hover) {
+    color: alpha(@fg, 0.25);
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+
+    background-color: alpha(@accent, 0.2);
+    color: @accent;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background-color: @accent;
+    color: @bg;
+}
+
+#workspaces button.urgent {
+    color: @accent;
+}

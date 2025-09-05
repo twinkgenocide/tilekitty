@@ -1,0 +1,26 @@
+{
+    "custom/sep": {
+        "format":   "::",
+        "tooltip":  false
+    },
+    "custom/ticker": {
+        "exec": "~/Code/desktop-scripts/bar/rss-ticker.py",
+        "format": "{}"
+    },
+    "custom/notifs": {
+        "exec": "~/Code/desktop-scripts/bar/notifs.sh",
+        "interval": "once",
+        "on-click": "swaync-client -d",
+        "exec-on-event": true,
+        "format": "<span size='large'>{}</span>",
+        "return-type": "json"
+    },
+    "custom/network": {
+        "exec": "~/Code/desktop-scripts/bar/ping-status.sh",
+        "on-click": "~/Code/desktop-scripts/bar/toggle-airplane.sh",
+        "exec-on-event": true,
+        "format": "<span size='x-large'>{}</span>",
+        "interval": 5,
+        "return-type": "json"
+    },
+}

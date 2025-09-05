@@ -1,0 +1,21 @@
+{
+    "include": [
+        "~/.tilekitty/dotfiles/waybar/modules/misc.jsonc",
+        "~/.tilekitty/dotfiles/waybar/modules/power.jsonc",
+        "~/.tilekitty/dotfiles/waybar/modules/custom.jsonc",
+        "~/.tilekitty/dotfiles/waybar/modules/workspaces.jsonc"
+    ],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/ticker"
+    ],
+    "modules-right": [
+        "custom/notifs",
+        "pulseaudio",
+        "custom/network",
+        "group/status",
+        "group/power"
+    ]
+}

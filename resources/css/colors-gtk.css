@@ -1,0 +1,9 @@
+@define-color bg alpha(#161616, 0.8);
+@define-color fg white;
+
+@define-color bg-light alpha(#1a1a1a, 0.8);
+@define-color bg-dark alpha(#121212, 0.8);
+@define-color bg-border #484848;
+
+@define-color accent #7841d8;
+@define-color accent-dark #6a38bf;

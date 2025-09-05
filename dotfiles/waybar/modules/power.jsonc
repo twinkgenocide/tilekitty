@@ -1,0 +1,26 @@
+{
+    "custom/logoff": {
+        "format": "<span size='x-large'>󰗽</span>",
+        "on-click": "~/.tilekitty/bin/util/power logoff ask",
+        "tooltip": false
+    },
+    "custom/shutdown": {
+        "format": "<span size='large'></span>",
+        "on-click": "~/.tilekitty/bin/util/power shutdown ask",
+        "tooltip": false
+    },
+    "custom/reboot": {
+        "format": "<span size='x-large'>󰜉</span>",
+        "on-click": "~/.tilekitty/bin/util/power reboot ask",
+        "tooltip": false
+    },
+    "group/power": {
+        "orientation": "horizontal",
+        "drawer": { },
+        "modules": [
+            "custom/logoff",
+            "custom/reboot",
+            "custom/shutdown"
+        ]
+    }
+}

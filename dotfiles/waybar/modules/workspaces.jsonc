@@ -1,0 +1,19 @@
+{
+    "hyprland/workspaces": {
+        "format": "<span size='large'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "home": "󰀘",
+            "social": "󰿨",
+            "music": "<big>󱑼</big>",
+            "edit": "<big>󰺕</big>",
+            "docs": "<big>󱓝</big>",
+            "dev": "",
+            "games": "<big>󰆧</big>",
+            "research": "<big>󰧾</big>",
+            "virtual": "",
+            "default": "󰀦"
+        },
+        "sort-by-number": true
+    }
+}

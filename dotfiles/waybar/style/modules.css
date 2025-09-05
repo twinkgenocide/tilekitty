@@ -1,0 +1,97 @@
+#custom-network, #custom-notifs {
+   min-width: 28px;
+   transition: color, background-color, min-width;
+   transition-duration: 200ms;
+}
+
+#custom-network.degraded {
+   color: lighter(@accent);
+}
+
+#custom-network.airplane, #custom-network.unavailable, #custom-notifs.dnd {
+   color: alpha(@fg, 0.25);
+}
+
+#custom-network:hover, #custom-notifs:hover {
+   min-width: 48px;
+   background-color: @accent;
+   color: @bg;
+}
+
+#pulseaudio {
+   min-width: 28px;
+   transition: background-color, color, min-width;
+   transition-duration: 200ms;
+}
+
+#pulseaudio.muted {
+   color: alpha(@fg, 0.25);
+}
+
+#pulseaudio:hover {
+   min-width: 48px;
+   background-color: @accent;
+   color: @bg;
+}
+
+#status {
+   margin: 0 3px;
+   padding: 0 9px;
+   transition: background-color;
+   transition-duration: 200ms;
+}
+
+#status:hover {
+    background-color: @accent;
+}
+
+#status:hover .module {
+    margin: 0 6px;
+    color: @bg;
+}
+
+#power {
+   background-color: @accent;
+   padding: 0;
+
+   transition: background-color;
+   transition-duration: 200ms;
+}
+
+#power:hover {
+   background-color: transparent;
+}
+
+#power .module {
+   background-color: transparent;
+   color: @bg;
+
+   min-width: 28px;
+   margin: 0;
+   padding: 0 6px;
+
+   transition: background-color, color;
+   transition-duration: 200ms;
+}
+
+#power:hover .module {
+   color: @fg;
+}
+
+#power:hover .module:hover {
+   background-color: @accent;
+   color: @bg;
+   transition-duration: 50ms;
+}
+
+#power #custom-reboot {
+  padding-bottom: 1px;
+}
+
+#custom-ticker {
+    background-color: @accent;
+    color: @bg;
+
+    min-width: 450px;
+    padding: 0 9px;
+}

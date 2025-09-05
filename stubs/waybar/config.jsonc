@@ -1,0 +1,6 @@
+{
+    "include": [
+        "~/.tilekitty/dotfiles/waybar/modules.jsonc",
+        "~/.tilekitty/dotfiles/waybar/waybar.jsonc"
+    ]
+}

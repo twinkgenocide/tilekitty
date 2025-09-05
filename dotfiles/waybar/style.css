@@ -1,0 +1,6 @@
+@import url('../../resources/css/colors-gtk.css');
+
+@import url('style/bar.css');
+@import url('style/tooltip.css');
+@import url('style/workspaces.css');
+@import url('style/modules.css');
