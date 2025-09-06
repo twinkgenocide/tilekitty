@@ -1,4 +1,5 @@
-@define-color bg alpha(#161616, 0.8);
+@define-color bg-opaque #161616;
+@define-color bg alpha(@bg-opaque, 0.8);
 @define-color fg white;
 
 @define-color bg-light alpha(#1a1a1a, 0.8);

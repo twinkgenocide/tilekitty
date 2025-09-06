@@ -16,8 +16,7 @@
 
 #waybar > box {
    background-color: @bg;
-   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-   margin-bottom: 5px;
+   border-bottom: 1px solid darker(@bg-opaque);
 }
 
 .module {
