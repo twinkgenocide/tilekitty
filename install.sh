@@ -9,11 +9,11 @@ if ! curl -Is https://github.com/ &>/dev/null; then
 fi
 
 if [ -d "$TARGET_DIR" ]; then
-    read -p "Directory $TARGET_DIR exists. Remove it? [y/N] " answer
+    read -p "Tilekitty install detected. All files will be erased unless inside user directories. Proceed? [y/N] " answer
     case "$answer" in
     [yY][eE][sS] | [yY])
-        rm -rf "$TARGET_DIR"
-        echo "Removed '$TARGET_DIR'."
+        find "$TARGET_DIR" -mindepth 1 -type f ! -path '*user*' -delete
+        find "$TARGET_DIR" -depth -type d -empty ! -path '*user' -delete
         ;;
     *)
         echo "Aborted."
@@ -35,15 +35,15 @@ esac
 
 mkdir -pv "$TARGET_DIR"
 
-cp -rv "$SOURCE_DIR/stubs" "$TARGET_DIR/stubs"
-cp -rv "$SOURCE_DIR/scripts" "$TARGET_DIR/scripts"
-cp -rv "$SOURCE_DIR/dotfiles" "$TARGET_DIR/dotfiles"
-cp -rv "$SOURCE_DIR/resources" "$TARGET_DIR/resources"
-cp -rv "$SOURCE_DIR/env.sh" "$TARGET_DIR/env.sh"
+cp -rvn "$SOURCE_DIR/stubs" "$TARGET_DIR/stubs"
+cp -rvn "$SOURCE_DIR/scripts" "$TARGET_DIR/scripts"
+cp -rvn "$SOURCE_DIR/dotfiles" "$TARGET_DIR/dotfiles"
+cp -rvn "$SOURCE_DIR/resources" "$TARGET_DIR/resources"
+cp -rvn "$SOURCE_DIR/env.sh" "$TARGET_DIR/env.sh"
 
 if lsmod | grep -q '^nvidia'; then
     echo "NVIDIA Detected - Copying NVIDIA .conf files"
-    cp -rv "$SOURCE_DIR/extra/nvidia/"* "$TARGET_DIR"
+    cp -rvn "$SOURCE_DIR/extra/nvidia"/* "$TARGET_DIR"
 fi
 
 # download resources
