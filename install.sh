@@ -35,11 +35,11 @@ esac
 
 mkdir -pv "$TARGET_DIR"
 
-cp -rvn "$SOURCE_DIR/stubs" "$TARGET_DIR/stubs"
-cp -rvn "$SOURCE_DIR/scripts" "$TARGET_DIR/scripts"
-cp -rvn "$SOURCE_DIR/dotfiles" "$TARGET_DIR/dotfiles"
-cp -rvn "$SOURCE_DIR/resources" "$TARGET_DIR/resources"
-cp -rvn "$SOURCE_DIR/env.sh" "$TARGET_DIR/env.sh"
+cp -rvn "$SOURCE_DIR/stubs" "$TARGET_DIR"
+cp -rvn "$SOURCE_DIR/scripts" "$TARGET_DIR"
+cp -rvn "$SOURCE_DIR/dotfiles" "$TARGET_DIR"
+cp -rvn "$SOURCE_DIR/resources" "$TARGET_DIR"
+cp -rvn "$SOURCE_DIR/env.sh" "$TARGET_DIR"
 
 if lsmod | grep -q '^nvidia'; then
     echo "NVIDIA Detected - Copying NVIDIA .conf files"
