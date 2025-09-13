@@ -13,7 +13,7 @@ cd ~/.tilekitty/dotfiles/wofi
 choice="$(cat $TK_RES/emoji.txt | wofi --conf emoji-config)"
 
 if [ -n "$choice" ]; then
-    choice="${choice:0:1}"
+    choice="$(echo "$choice" | cut -d' ' -f1)"
     wl-copy "$choice"
 
     play_sound message.ogg
