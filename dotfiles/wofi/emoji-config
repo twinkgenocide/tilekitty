@@ -1,0 +1,16 @@
+style=emoji.css
+
+width=500
+height=400
+columns=10
+
+halign=fill
+content_halign=center
+
+mode=dmenu
+dmenu-parse_action=true
+prompt=
+
+no_custom_entry=true
+close_on_focus_loss=true
+normal_window=true

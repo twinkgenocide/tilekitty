@@ -1,0 +1,14 @@
+style=style.css
+
+width=500
+height=400
+
+mode=drun
+prompt=
+
+no_custom_entry=true
+close_on_focus_loss=true
+normal_window=true
+
+allow_images=true
+image_size=24
