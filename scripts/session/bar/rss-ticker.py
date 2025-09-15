@@ -239,7 +239,7 @@ def get_feed_urls():
     return feed_urls
 
 def read_feed_repo():
-    filepath = os.path.expanduser("~/.tilekitty/resources/rss/feeds.txt")
+    filepath = os.path.expanduser("~/.tilekitty/resources/user/feeds.txt")
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read().splitlines()
     return []
