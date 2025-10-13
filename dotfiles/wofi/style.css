@@ -39,7 +39,7 @@ window {
 
 #entry {
     margin-top: 2px;
-    padding: 3px;
+    padding: 3px 6px;
     border: 1px solid transparent;
     border-radius: 2px;
     outline: none;
