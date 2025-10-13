@@ -1,7 +1,7 @@
 style=style.css
 
 width=500
-height=400
+height=200
 
 mode=dmenu
 dmenu-print_line_num=true
@@ -10,6 +10,9 @@ prompt=
 no_custom_entry=true
 close_on_focus_loss=true
 normal_window=true
+
+use_search_box=false
+hide_search=true
 
 allow_images=true
 image_size=24
