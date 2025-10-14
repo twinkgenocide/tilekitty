@@ -1,0 +1,13 @@
+style=textfield/style.css
+
+width=400
+height=0
+
+mode=dmenu
+prompt=wofi-textfield
+
+close_on_focus_loss=true
+normal_window=true
+
+use_search_box=false
+hide_scroll=true

@@ -1,0 +1,10 @@
+@import url('./style.css');
+
+#input {
+    padding: 2px 8px;
+}
+
+#scroll {
+    padding: 0;
+    margin: 0;
+}
