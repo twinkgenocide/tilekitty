@@ -5,7 +5,7 @@ height=200
 
 mode=dmenu
 dmenu-print_line_num=true
-prompt=
+prompt=wofi-select
 
 no_custom_entry=true
 close_on_focus_loss=true
