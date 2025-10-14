@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
 fi
 
 cd ~/.tilekitty/dotfiles/wofi
-choice="$(cat $TK_RES/user/emoji.txt | wofi --conf emoji-config)"
+choice="$(cat $TK_RES/user/emoji.txt | wofi --conf emoji/config)"
 
 if [ -n "$choice" ]; then
     choice="$(echo "$choice" | cut -d' ' -f1)"
