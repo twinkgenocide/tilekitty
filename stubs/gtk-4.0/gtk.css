@@ -74,7 +74,7 @@ gridview child:hover {
 }
 
 gridview child:selected {
-    outline: 1px solid var(--kitty-accent);
+    outline: 2px solid var(--kitty-accent);
     background-color: alpha(var(--kitty-hover), 0.5);
 }
 
