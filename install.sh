@@ -66,19 +66,6 @@ for dir in "$TARGET_DIR/stubs"/*; do
     ln -sv "$dir" "$target"
 done
 
-# gtk4
-
-GTK_DIR="$HOME/.config/gtk-4.0"
-if [ -d "$GTK_DIR" ]; then
-    rm -rfv "$GTK_DIR"/*
-else
-    mkdir -pv "$GTK_DIR"
-fi
-
-ln -sfv "$TARGET_DIR/resources/gtk4/gtk.css" "$GTK_DIR/gtk.css"
-ln -sfv "$TARGET_DIR/resources/gtk4/assets" "$GTK_DIR/assets"
-ln -sfv "$TARGET_DIR/resources/css/colors-gtk.css" "$GTK_DIR/colors-gtk.css"
-
 # done!
 
 echo '₍^. .^₎⟆ tilekitty has been installed. enjoy!'

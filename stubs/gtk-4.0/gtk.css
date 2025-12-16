@@ -1,0 +1,91 @@
+/* Global */
+
+:root {
+    --kitty-accent: #7841d8;
+    --kitty-bg-opaque: #121212;
+    --kitty-bg-alt-opaque: #1d1d1d;
+    --kitty-bg: alpha(var(--kitty-bg-opaque), 0.8);
+    --kitty-bg-alt: alpha(var(--kitty-bg-alt-opaque), 0.8);
+    --kitty-hover: #d6d6d610;
+}
+
+window {
+    background-color: var(--kitty-bg);
+}
+
+window.nautilus-window {
+    background-color: transparent;
+}
+
+* {
+    border-radius: 0;
+}
+
+overlay-split-view>widget {
+    background-color: var(--kitty-bg);
+}
+
+.sidebar-pane {
+    background-color: var(--kitty-bg-alt);
+}
+
+.content-pane {
+    background-color: var(--kitty-bg);
+}
+
+statuspage {
+    background-color: transparent;
+}
+
+/* Nautilus */
+
+headerbar {
+    min-height: 40px;
+}
+
+headerbar * {
+    min-height: 20px;
+}
+
+#NautilusPathBar {
+    background-color: var(--kitty-hover);
+}
+
+.top-bar entry:focus-within {
+    outline-color: var(--kitty-accent);
+}
+
+.sidebar-row {
+    min-height: 30px;
+}
+
+.floating-bar {
+    border: 1px solid var(--kitty-accent);
+    background-color: shade(var(--kitty-accent), 0.6);
+    box-shadow: none;
+}
+
+gridview child {
+    outline-offset: 0;
+}
+
+gridview child:hover {
+    background-color: var(--kitty-hover);
+}
+
+gridview child:selected {
+    outline: 1px solid var(--kitty-accent);
+    background-color: alpha(var(--kitty-hover), 0.5);
+}
+
+/* GhosTTY */
+
+
+.top-bar.raised {
+    background-color: var(--kitty-bg-alt);
+    min-height: 38px;
+}
+
+.top-bar.raised * {
+    min-height: 0;
+}
