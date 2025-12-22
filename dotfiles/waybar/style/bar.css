@@ -1,12 +1,12 @@
 * {
-    border: none;
-    border-radius: 0;
+   border: none;
+   border-radius: 0;
 
-    font-family: Iosevka Nerd Font Propo;
-    font-size: 13px;
-    font-weight: 500;
+   font-family: Iosevka Nerd Font Propo;
+   font-size: 13px;
+   font-weight: 500;
 
-    transition-timing-function: ease-out;
+   transition-timing-function: ease-out;
 }
 
 #waybar {
@@ -14,9 +14,10 @@
    color: @fg;
 }
 
-#waybar > box {
+#waybar>box {
    background-color: @bg;
-   border-bottom: 1px solid darker(@bg-opaque);
+   margin-bottom: 2px;
+   box-shadow: 0 0 2px alpha(black, 0.5);
 }
 
 .module {
@@ -25,5 +26,5 @@
 }
 
 #custom-sep {
-    margin: 0 6px;
+   margin: 0 6px;
 }
