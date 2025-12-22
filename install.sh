@@ -2,6 +2,7 @@
 
 SOURCE_DIR="$(dirname "${BASH_SOURCE[0]}")"
 TARGET_DIR="$HOME/.tilekitty"
+DEFAULT_WALLPAPER_URL="https://w.wallhaven.cc/full/3k/wallhaven-3kvjxv.jpg"
 
 if ! curl -Is https://github.com/ &>/dev/null; then
     echo "Cannot reach GitHub. Check network or firewall."
@@ -65,6 +66,12 @@ for dir in "$TARGET_DIR/stubs"/*; do
 
     ln -sv "$dir" "$target"
 done
+
+# download wallpaper if it does not exist
+if [ ! -f "$TARGET_DIR/resources/user/wallpaper" ]; then
+    # curl -l "$DEFAULT_WALLPAPER_URL" >"$TARGET_DIR/resources/user/wallpaper"
+    curl -l "$DEFAULT_WALLPAPER_URL" | magick convert - -colorspace Gray "$TARGET_DIR/resources/user/wallpaper"
+fi
 
 # done!
 
