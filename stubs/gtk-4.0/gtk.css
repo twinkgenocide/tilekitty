@@ -1,7 +1,9 @@
 /* Global */
 
+@import url("../../.tilekitty/resources/css/colors-gtk.css");
+
 :root {
-    --kitty-accent: #7841d8;
+    --kitty-accent: @accent;
     --kitty-bg-opaque: #121212;
     --kitty-bg-alt-opaque: #1d1d1d;
     --kitty-bg: alpha(var(--kitty-bg-opaque), 0.8);
